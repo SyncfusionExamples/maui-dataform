@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:local="clr-namespace:ManualValidation"
+             x:Class="ManualValidation.MainPage">
+
+    <Grid RowDefinitions="0.9*,  0.1*">
+        <Grid.BindingContext>
+            <local:ValidationViewModel/>
+        </Grid.BindingContext>
+        <dataForm:SfDataForm x:Name="dataForm" 
+                             DataObject="{Binding ManualValidationModel}" 
+                             Grid.Row="0" 
+                             ValidationMode="Manual"/>
+
+        <Button x:Name="Validate" Text="Validate" Grid.Row="1" MaximumHeightRequest="50" MaximumWidthRequest="300"/>
+    </Grid>
+
+    <ContentPage.Behaviors>
+        <local:ValidationBehavior/>
+    </ContentPage.Behaviors>
+
+</ContentPage>
