@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:local="clr-namespace:DataFormAnnotations"
+             x:Class="DataFormAnnotations.MainPage">
+
+
+    <ContentPage.BindingContext>
+        <local:DataFormViewModel/>
+    </ContentPage.BindingContext>
+
+    <dataForm:SfDataForm x:Name="dataForm" 
+            DataObject="{Binding DataFormModel}"/>
+</ContentPage>
