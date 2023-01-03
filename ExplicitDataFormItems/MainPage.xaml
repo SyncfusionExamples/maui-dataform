@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:local="clr-namespace:ManualDataFormItemSample"
+             x:Class="ManualDataFormItemSample.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:DataFormViewModel/>
+    </ContentPage.BindingContext>
+    
+    <dataForm:SfDataForm DataObject="{Binding DataFormModel}" AutoGenerateItems="False">
+        <dataForm:SfDataForm.DefaultLayoutSettings>
+            <dataForm:DataFormDefaultLayoutSettings LabelWidth="{OnIdiom Desktop=0.1*, Phone=0.15*}" EditorWidth="{OnIdiom Desktop=0.9*, Phone=0.85*}"/>
+        </dataForm:SfDataForm.DefaultLayoutSettings>
+
+        <dataForm:SfDataForm.Items>
+            <dataForm:DataFormCustomItem >
+                <dataForm:DataFormCustomItem.EditorView>
+                    <Image Source="contactimage.png"
+                                   HeightRequest="80" HorizontalOptions="Center"/>
+                </dataForm:DataFormCustomItem.EditorView>
+            </dataForm:DataFormCustomItem>
+
+            <dataForm:DataFormGroupItem Name="Name">
+                <dataForm:DataFormGroupItem.Items>
+                    <dataForm:DataFormTextItem FieldName="Name" >
+                    </dataForm:DataFormTextItem>
+                    <dataForm:DataFormTextItem FieldName="LastName"/>
+                </dataForm:DataFormGroupItem.Items>
+            </dataForm:DataFormGroupItem>
+
+            <dataForm:DataFormGroupItem Name="Mobile">
+                <dataForm:DataFormGroupItem.Items>
+                    <dataForm:DataFormTextItem FieldName="Mobile" />
+                    <dataForm:DataFormTextItem FieldName="Landline"/>
+                </dataForm:DataFormGroupItem.Items>
+            </dataForm:DataFormGroupItem>
+
+            <dataForm:DataFormGroupItem Name="Address">
+                <dataForm:DataFormGroupItem.Items>
+                    <dataForm:DataFormMultilineItem FieldName="Address" RowSpan="2"/>
+                    <dataForm:DataFormTextItem FieldName="City" />
+                    <dataForm:DataFormTextItem FieldName="State" />
+                    <dataForm:DataFormTextItem FieldName="ZipCode" Keyboard="Numeric"/>
+                </dataForm:DataFormGroupItem.Items>
+            </dataForm:DataFormGroupItem>
+            <dataForm:DataFormTextItem FieldName="Email"/>
+        </dataForm:SfDataForm.Items>
+    </dataForm:SfDataForm>
+</ContentPage>
