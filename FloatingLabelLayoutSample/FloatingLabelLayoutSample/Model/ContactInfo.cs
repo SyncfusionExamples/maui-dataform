@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace FloatingLabelLayoutSample
 {
-    internal class FloatingLabelModel
+    internal class ContactInfo
     {
         [Display(Name = "First Name", Prompt = "Enter your first name")]
         [DataFormDisplayOptions(ValidMessage = "Valid name")]

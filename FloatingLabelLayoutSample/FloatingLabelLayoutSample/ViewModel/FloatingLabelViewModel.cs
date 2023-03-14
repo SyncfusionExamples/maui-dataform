@@ -10,9 +10,9 @@ namespace FloatingLabelLayoutSample
     {
         public FloatingLabelViewModel() 
         {
-            this.FloatingLabelModel = new FloatingLabelModel();
+            this.ContactInfo = new ContactInfo();
         }
 
-        public FloatingLabelModel FloatingLabelModel { get; set; }
+        public ContactInfo ContactInfo { get; set; }
     }
 }

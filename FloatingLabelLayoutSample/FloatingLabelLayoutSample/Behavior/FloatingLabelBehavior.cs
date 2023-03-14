@@ -19,7 +19,7 @@ namespace FloatingLabelLayoutSample
         {
             if (e.DataFormItem != null)
             {
-                if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.FirstName))
+                if (e.DataFormItem.FieldName == nameof(ContactInfo.FirstName))
                 {
                     e.DataFormItem.ValidMessageLabelTextStyle = new DataFormTextStyle { TextColor = Colors.GreenYellow, FontAttributes = FontAttributes.Italic };
                     e.DataFormItem.LeadingView = new Label { Text = "F", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
@@ -29,7 +29,7 @@ namespace FloatingLabelLayoutSample
                         HelperTextStyle = new DataFormTextStyle { TextColor = Colors.Violet, FontAttributes = FontAttributes.Bold },
                     };
                 }
-                else if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.MiddleName))
+                else if (e.DataFormItem.FieldName == nameof(ContactInfo.MiddleName))
                 {
                     e.DataFormItem.ErrorLabelTextStyle = new DataFormTextStyle { TextColor = Colors.Indigo, FontAttributes = FontAttributes.Italic };
                     e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
@@ -39,7 +39,7 @@ namespace FloatingLabelLayoutSample
                         Stroke = Colors.BlueViolet,
                     };
                 }
-                else if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.LastName))
+                else if (e.DataFormItem.FieldName == nameof(ContactInfo.LastName))
                 {
                     e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
                     {
@@ -47,12 +47,12 @@ namespace FloatingLabelLayoutSample
                         FocusedStroke = Colors.AliceBlue,
                     };
                 }
-                else if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.ContactNumber))
+                else if (e.DataFormItem.FieldName == nameof(ContactInfo.ContactNumber))
                 {
                     e.DataFormItem.TrailingView = new Label { Text = "E", FontSize = 18, TextColor = Colors.Gray, FontFamily = "InputLayoutIcons", HeightRequest = 24, VerticalTextAlignment = TextAlignment.End };
                     e.DataFormItem.TrailingViewPosition = TextInputLayoutViewPosition.Inside;
                 }
-                else if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.Email))
+                else if (e.DataFormItem.FieldName == nameof(ContactInfo.Email))
                 {
                     e.DataFormItem.TextInputLayoutSettings = new TextInputLayoutSettings
                     {
@@ -60,7 +60,7 @@ namespace FloatingLabelLayoutSample
                         UnfocusedStrokeThickness = 4.0,
                     };
                 }
-                else if (e.DataFormItem.FieldName == nameof(FloatingLabelModel.Address))
+                else if (e.DataFormItem.FieldName == nameof(ContactInfo.Address))
                 {
                     e.DataFormItem.LabelTextStyle = new DataFormTextStyle { FontAttributes = FontAttributes.Italic, TextColor = Colors.BlueViolet };
                 }
