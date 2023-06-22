@@ -19,6 +19,10 @@ namespace EditorsSample
         public string Address { get; set; }
 
         [DataFormDisplayOptions(ColumnSpan = 2)]
+        [DataType(DataType.PhoneNumber)]
+        public string PhoneNumber { get; set; }
+
+        [DataFormDisplayOptions(ColumnSpan = 2)]
         public string Password { get; set; }
 
         [DataFormDisplayOptions(ColumnSpan = 2)]
@@ -40,7 +44,10 @@ namespace EditorsSample
         public string City { get; set; }
 
         [DataFormDisplayOptions(ColumnSpan = 2)]
-        public string Country { get; set; } 
+        public string Country { get; set; }
+
+        [DataFormDisplayOptions(ColumnSpan = 2)]
+        public double Fee { get; set; }
 
     }
 
