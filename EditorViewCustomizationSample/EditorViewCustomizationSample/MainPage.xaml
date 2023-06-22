@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
+             xmlns:local="clr-namespace:EditorViewCustomizationSample"
+             x:Class="EditorViewCustomizationSample.MainPage">
+    
+    <dataForm:SfDataForm x:Name="dataForm" 
+            DataObject="{Binding EditorCustomizationModel}">
+        <dataForm:SfDataForm.BindingContext>
+            <local:EditorCustomizationViewModel/>
+        </dataForm:SfDataForm.BindingContext>
+        <dataForm:SfDataForm.Behaviors>
+            <local:EditorCustomizationBehavior/>
+        </dataForm:SfDataForm.Behaviors>
+    </dataForm:SfDataForm>
+
+</ContentPage>
