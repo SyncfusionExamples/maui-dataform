@@ -8,6 +8,7 @@
 
 
     <dataForm:SfDataForm x:Name="dataForm" 
+                         x:DataType="local:DataFormViewModel"
             DataObject="{Binding DataFormModel}">
         <dataForm:SfDataForm.BindingContext>
             <local:DataFormViewModel/>

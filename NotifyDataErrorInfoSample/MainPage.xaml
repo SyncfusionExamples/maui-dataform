@@ -6,7 +6,9 @@
              x:Class="NotifyDataErrorInfoSample.MainPage">
 
     <ContentPage.Content>
-        <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding EmployeeInfo}"/>
+        <dataForm:SfDataForm x:Name="dataForm"
+                             x:DataType="local:DataFormViewModel"
+                             DataObject="{Binding EmployeeInfo}"/>
     </ContentPage.Content>
 
     <ContentPage.BindingContext>

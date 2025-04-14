@@ -8,6 +8,6 @@ namespace ConvertersSample
     {
         [DataFormValueConverter(typeof(StringToDateTimeConverter))]
         [DataType(DataType.Date)]
-        public string DateTime { get; set; }
+        public string? DateTime { get; set; }
     }
 }

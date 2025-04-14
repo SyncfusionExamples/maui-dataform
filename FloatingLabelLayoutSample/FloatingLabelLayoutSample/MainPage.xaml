@@ -9,6 +9,7 @@
         <local:FloatingLabelViewModel/>
     </ContentPage.BindingContext>
     <dataForm:SfDataForm x:Name="FloatingLabelLayout" 
+                         x:DataType="local:FloatingLabelViewModel"
                          LayoutType="TextInputLayout"
                          DataObject="{Binding ContactInfo}">
         <dataForm:SfDataForm.Behaviors>

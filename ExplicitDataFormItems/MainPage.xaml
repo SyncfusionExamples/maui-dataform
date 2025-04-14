@@ -9,7 +9,9 @@
         <local:DataFormViewModel/>
     </ContentPage.BindingContext>
     
-    <dataForm:SfDataForm DataObject="{Binding DataFormModel}" AutoGenerateItems="False">
+    <dataForm:SfDataForm
+        x:DataType="local:DataFormViewModel"
+        DataObject="{Binding DataFormModel}" AutoGenerateItems="False">
         <dataForm:SfDataForm.DefaultLayoutSettings>
             <dataForm:DataFormDefaultLayoutSettings LabelWidth="{OnIdiom Desktop=0.1*, Phone=0.15*}" EditorWidth="{OnIdiom Desktop=0.9*, Phone=0.85*}"/>
         </dataForm:SfDataForm.DefaultLayoutSettings>

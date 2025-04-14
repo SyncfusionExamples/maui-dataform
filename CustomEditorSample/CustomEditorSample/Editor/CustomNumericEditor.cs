@@ -6,7 +6,7 @@ namespace CustomEditorSample
     public class CustomNumericEditor : IDataFormEditor
     {
         private SfDataForm dataForm;
-        private DataFormCustomItem dataFormCustomItem;
+        private DataFormCustomItem? dataFormCustomItem;
 
         public CustomNumericEditor(SfDataForm dataForm)
         {
@@ -29,7 +29,7 @@ namespace CustomEditorSample
             return view;
         }
 
-        private void OnViewTextChanged(object sender, TextChangedEventArgs e)
+        private void OnViewTextChanged(object? sender, TextChangedEventArgs e)
         {
             if (sender is not InputView numericEntry || dataFormCustomItem == null)
             {

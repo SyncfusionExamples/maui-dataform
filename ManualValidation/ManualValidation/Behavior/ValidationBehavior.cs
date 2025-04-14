@@ -12,12 +12,12 @@ namespace ManualValidation
         /// <summary>
         /// Holds the data form object.
         /// </summary>
-        private SfDataForm dataForm;
+        private SfDataForm? dataForm;
 
         /// <summary>
         /// Holds the sign in button instance.
         /// </summary>
-        private Button validate;
+        private Button? validate;
 
         protected override void OnAttachedTo(ContentPage bindable)
         {
@@ -30,17 +30,17 @@ namespace ManualValidation
             }
         }
 
-        private async void OnValidateClicked(object sender, EventArgs e)
+        private async void OnValidateClicked(object? sender, EventArgs e)
         {
-            if (this.dataForm != null && Application.Current?.MainPage != null)
+            if (this.dataForm != null)
             {
                 if (this.dataForm.Validate())
                 {
-                    await Application.Current.MainPage.DisplayAlert("", "Successfully Validated", "OK");
+                    await DisplayAlert("", "Successfully Validated", "OK");
                 }
                 else
                 {
-                    await Application.Current.MainPage.DisplayAlert("", "Please enter the required details", "OK");
+                    await DisplayAlert("", "Please enter the required details", "OK");
                 }
             }
         }
@@ -52,6 +52,18 @@ namespace ManualValidation
             {
                 this.validate.Clicked -= this.OnValidateClicked;
             }
+        }
+        /// <summary>
+        /// Displays an alert dialog to the user.
+        /// </summary>
+        /// <param name="title">The title of the alert dialog.</param>
+        /// <param name="message">The message to display.</param>
+        /// <param name="cancel">The text for the cancel button.</param>
+        /// <returns>A task representing the asynchronous alert display operation.</returns>
+        private Task DisplayAlert(string title, string message, string cancel)
+        {
+            return App.Current?.Windows?[0]?.Page!.DisplayAlert(title, message, cancel)
+                   ?? Task.FromResult(false);
         }
     }
 }

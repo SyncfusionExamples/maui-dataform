@@ -15,7 +15,7 @@ namespace Grouping
             dataForm.GenerateDataFormItem += this.OnGenerateDataFormItem;
         }
 
-        private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+        private void OnGenerateDataFormItem(object? sender, GenerateDataFormItemEventArgs e)
         {
             if (e.DataFormGroupItem != null)
             {
