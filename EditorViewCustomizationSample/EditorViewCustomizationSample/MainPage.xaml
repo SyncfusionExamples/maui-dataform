@@ -6,6 +6,7 @@
              x:Class="EditorViewCustomizationSample.MainPage">
     
     <dataForm:SfDataForm x:Name="dataForm" 
+                         x:DataType="local:EditorCustomizationViewModel"
             DataObject="{Binding EditorCustomizationModel}">
         <dataForm:SfDataForm.BindingContext>
             <local:EditorCustomizationViewModel/>

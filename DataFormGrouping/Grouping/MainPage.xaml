@@ -9,7 +9,9 @@
         <local:DataFormViewModel/>
     </ContentPage.BindingContext>
     
-    <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding GroupingModel}">
+    <dataForm:SfDataForm x:Name="dataForm"
+                         x:DataType="local:DataFormViewModel"
+                         DataObject="{Binding GroupingModel}">
         <dataForm:SfDataForm.Behaviors>
             <local:GroupingBehavior/>
         </dataForm:SfDataForm.Behaviors>

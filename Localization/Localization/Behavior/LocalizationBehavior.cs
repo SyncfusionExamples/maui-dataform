@@ -1,9 +1,4 @@
 ﻿using Syncfusion.Maui.DataForm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Localization
 {
@@ -17,7 +12,7 @@ namespace Localization
             dataForm.ValidateProperty += OnDataFormValidateProperty;
         }
 
-        private void OnDataFormValidateProperty(object sender, DataFormValidatePropertyEventArgs e)
+        private void OnDataFormValidateProperty(object? sender, DataFormValidatePropertyEventArgs e)
         {
             if (e.PropertyName == nameof(LocalizationModel.LastName))
             {

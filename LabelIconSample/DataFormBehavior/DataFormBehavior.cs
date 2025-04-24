@@ -1,9 +1,4 @@
 ﻿using Syncfusion.Maui.DataForm;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LabelIconSample
 {
@@ -17,28 +12,28 @@ namespace LabelIconSample
             dataForm.DefaultLayoutSettings.EditorWidth = new DataFormItemLength(0.8, DataFormItemLengthUnitType.Star);
         }
 
-        private void OnGenerateDataFormItem(object sender, GenerateDataFormItemEventArgs e)
+        private void OnGenerateDataFormItem(object? sender, GenerateDataFormItemEventArgs e)
         {
             if (e.DataFormItem != null)
             {
                 if (e.DataFormItem.FieldName == nameof(DataFormModel.Name))
                 {
-                    e.DataFormItem.LeadingLabelIcon = new FontImageSource() { Glyph = "F", FontFamily = "InputLayoutIcons" };
+                    e.DataFormItem.LeadingView = new Image { Source =  new FontImageSource() { Glyph = "F", FontFamily = "InputLayoutIcons" } }; 
                 }
 
                 if(e.DataFormItem.FieldName == nameof(DataFormModel.Address))
                 {
-                    e.DataFormItem.LeadingLabelIcon = new FontImageSource() { Glyph = "C", FontFamily = "InputLayoutIcons" };
+                    e.DataFormItem.LeadingView = new Image { Source = new FontImageSource() { Glyph = "C", FontFamily = "InputLayoutIcons" } };
                 }
 
                 if (e.DataFormItem.FieldName == nameof(DataFormModel.Email))
                 {
-                    e.DataFormItem.LeadingLabelIcon = new FontImageSource() { Glyph = "G", FontFamily = "InputLayoutIcons" };
+                    e.DataFormItem.LeadingView = new Image { Source = new FontImageSource() { Glyph = "G", FontFamily = "InputLayoutIcons" } };
                 }
 
                 if (e.DataFormItem.FieldName == nameof(DataFormModel.Phone))
                 {
-                    e.DataFormItem.LeadingLabelIcon = new FontImageSource() { Glyph = "E", FontFamily = "InputLayoutIcons" };
+                    e.DataFormItem.LeadingView = new Image { Source = new FontImageSource() { Glyph = "E", FontFamily = "InputLayoutIcons" } };
                 }
             }
         }

@@ -6,6 +6,7 @@
              x:Class="ComplexItemsSourceSample.MainPage">
     <dataForm:SfDataForm
         x:Name="dataForm"
+        x:DataType="local:ComplexItemsSourceViewModel"
         DataObject="{Binding ComplexItemsSourceModel}">
         <dataForm:SfDataForm.BindingContext>
             <local:ComplexItemsSourceViewModel/>

@@ -9,7 +9,11 @@
         <Grid.BindingContext>
             <local:ManualCommitViewModel/>
         </Grid.BindingContext>
-        <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding ManualCommitModel}" CommitMode="Manual" Grid.Row="0"/>
+        <dataForm:SfDataForm x:Name="dataForm"
+                             x:DataType="local:ManualCommitViewModel"
+                             DataObject="{Binding ManualCommitModel}" 
+                             CommitMode="Manual"
+                             Grid.Row="0"/>
 
         <Button x:Name="Commit" Text="Commit" Grid.Row="1" MaximumHeightRequest="50" MaximumWidthRequest="300"/>
 

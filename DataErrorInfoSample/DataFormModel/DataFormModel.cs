@@ -5,11 +5,11 @@ namespace DataErrorInfoSample
 {
     public class DataFormModel  : IDataErrorInfo
     {
-        public string EmployeeID { get; set; }
+        public string? EmployeeID { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string Title { get; set; }
+        public string Title { get; set; } = string.Empty;
 
         [Display(AutoGenerateField = false)]
         public string Error

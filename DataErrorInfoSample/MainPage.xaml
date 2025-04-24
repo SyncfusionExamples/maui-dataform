@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataForm ="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
              xmlns:local="clr-namespace:DataErrorInfoSample"
-             x:Class="DataErrorInfoSample.MainPage">
+             x:Class="DataErrorInfoSample.MainPage"
+             x:DataType="local:DataFormViewModel">
     <ContentPage.Content>
         <dataForm:SfDataForm x:Name="dataForm" DataObject="{Binding DataFormModel}"/>
     </ContentPage.Content>

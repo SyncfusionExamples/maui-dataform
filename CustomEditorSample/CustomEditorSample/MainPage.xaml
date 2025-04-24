@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:dataForm="clr-namespace:Syncfusion.Maui.DataForm;assembly=Syncfusion.Maui.DataForm"
              xmlns:local="clr-namespace:CustomEditorSample"
-             x:Class="CustomEditorSample.MainPage">
+             x:Class="CustomEditorSample.MainPage"
+             x:DataType="local:DataFormViewModel">
 
     <ContentPage.BindingContext>
         <local:DataFormViewModel/>

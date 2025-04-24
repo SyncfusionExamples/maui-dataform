@@ -1,11 +1,13 @@
 ﻿using Syncfusion.Maui.Core.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Debug;
 
 namespace FloatingLabelLayoutSample;
 
 public static class MauiProgram
 {
-	public static MauiApp CreateMauiApp()
+
+    public static MauiApp CreateMauiApp()
 	{
 		var builder = MauiApp.CreateBuilder();
 		builder.ConfigureSyncfusionCore();

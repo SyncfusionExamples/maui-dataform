@@ -6,13 +6,13 @@ namespace NotifyDataErrorInfoSample
 {
     public class EmployeeInfo : INotifyDataErrorInfo
     {
-        public event EventHandler<DataErrorsChangedEventArgs> ErrorsChanged;
+        public event EventHandler<DataErrorsChangedEventArgs>? ErrorsChanged;
 
-        public string EmployeeID { get; set; }
+        public string? EmployeeID { get; set; }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
-        public string Title { get; set; }
+        public string? Title { get; set; }
 
         [Display(AutoGenerateField = false)]
         public bool HasErrors
@@ -23,7 +23,7 @@ namespace NotifyDataErrorInfoSample
             }
         }
 
-        public IEnumerable GetErrors(string propertyName)
+        public IEnumerable GetErrors(string? propertyName)
         {
             List<string> list = new List<string>();
             if (propertyName == nameof(Title) && this.Title.Contains("Marketing"))

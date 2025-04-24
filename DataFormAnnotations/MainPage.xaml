@@ -11,5 +11,6 @@
     </ContentPage.BindingContext>
 
     <dataForm:SfDataForm x:Name="dataForm" 
+                         x:DataType="local:DataFormViewModel"
             DataObject="{Binding DataFormModel}"/>
 </ContentPage>
